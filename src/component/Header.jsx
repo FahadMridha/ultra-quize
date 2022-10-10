@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     return (
-        <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
+        <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 bg-slate-300'>
             <div className='relative flex items-center justify-between'>
                 <Link
                     to='/'
@@ -13,7 +13,7 @@ const Header = () => {
                     className='inline-flex items-center'
                 >
                     
-                    <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
+                    <span className='ml-2 text-xl font-bold tracking-wide text-orange-400 '>
                         QuizUltra
                     </span>
                 </Link>
@@ -30,34 +30,25 @@ const Header = () => {
                     </li>
                     <li>
                         <Link
-                            to='/shop'
-                            aria-label='Shop'
-                            title='Shop'
+                            to='/statistics'
+                            aria-label='Statistics'
+                            title='Statistics'
                             className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
-                            Shop
+                            Statistics
                         </Link>
                     </li>
                     <li>
                         <Link
-                            to='/cart'
-                            aria-label='Cart'
-                            title='Cart'
+                            to='/blog'
+                            aria-label='Blog'
+                            title='Blog'
                             className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
-                            <p> Cart</p>
+                            <p> Blog</p>
                         </Link>
                     </li>
-                    <li>
-                        <Link
-                            to='/about'
-                            aria-label='About Us'
-                            title='About Us'
-                            className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                        >
-                            About Us
-                        </Link>
-                    </li>
+                    
                 </ul>
                 <div className='lg:hidden'>
                     <button
@@ -118,34 +109,25 @@ const Header = () => {
                                     <ul className='space-y-4'>
                                         <li>
                                             <Link
-                                                to='/shop'
-                                                aria-label='Shop'
-                                                title='Shop'
+                                                to='/statistics'
+                                                aria-label='Statistics'
+                                                title='Statistics'
                                                 className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                                             >
-                                                Shop
+                                                Statistics
                                             </Link>
                                         </li>
                                         <li>
                                             <Link
-                                                to='/cart'
-                                                aria-label='Cart'
-                                                title='Cart'
+                                                to='/blog'
+                                                aria-label='Blog'
+                                                title='Blog'
                                                 className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                                             >
-                                                <p> Cart</p>
+                                                <p> Blog</p>
                                             </Link>
                                         </li>
-                                        <li>
-                                            <Link
-                                                to='/about'
-                                                aria-label='About Us'
-                                                title='About Us'
-                                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                                            >
-                                                About Us
-                                            </Link>
-                                        </li>
+                                        
                                     </ul>
                                 </nav>
                             </div>
