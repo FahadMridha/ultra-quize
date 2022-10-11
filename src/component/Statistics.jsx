@@ -17,7 +17,7 @@ const Statistics = () => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <CartesianGrid strokeDasharray="3 3" />
+                <CartesianGrid stroke="#ccc" />
 
             </LineChart>
             
