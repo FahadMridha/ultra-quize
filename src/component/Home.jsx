@@ -9,11 +9,11 @@ const Home = () => {
     // console.log(categories);
     return (
         <div>
-            <div className='flex m-10'>
-                <img className='image-full h-96 w-1/2' src={quize7} alt="" />
-                <h1>This is Quize Side {categories.length}</h1>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-5  m-10'>
+                <img className='image-full  h-96 w-full rounded-lg' src={quize7} alt="" />
+                <h1 className='text-xl font-bold text-sky-500 text-center mt-12' >A quiz refers to a short test of knowledge. <br /> A quiz is much shorter than a traditional test or exam and is rarely impactful on a final course grade.</h1>
             </div>
-            <div className='grid grid-cols-4 gap-2'>
+            <div className='grid grid-cols-1 lg:grid-cols-4 gap-2'>
                 {
                     categories.map(categorie=> <Categories
                         key={categorie.id}

@@ -109,6 +109,16 @@ const Header = () => {
                                     <ul className='space-y-4'>
                                         <li>
                                             <Link
+                                                to='/home'
+                                                aria-label='Statistics'
+                                                title='Statistics'
+                                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+                                            >
+                                                Home
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
                                                 to='/statistics'
                                                 aria-label='Statistics'
                                                 title='Statistics'

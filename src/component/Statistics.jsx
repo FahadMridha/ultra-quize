@@ -9,7 +9,7 @@ const Statistics = () => {
     const data = dataType.data
     return (
         
-        <div className='mt-16'>
+        <div className='mt-28'>
             
             <LineChart height={300} width={500} data={data} >
                 <Line type="monotone" dataKey='total' stroke="#82ca9d" />

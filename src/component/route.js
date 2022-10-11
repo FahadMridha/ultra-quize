@@ -11,17 +11,17 @@ export const router=createBrowserRouter([
     element:<Root/>,
     errorElement:<ErrorPage/>,
         children:[
-        // {
-        //     path:'/',
-        //     element:<Home/>
-        // },
         {
-            path:'/home',
-            loader:async () => fetch('https://openapi.programming-hero.com/api/quiz'),
+            path:'/',
             element:<Home/>
         },
         {
-            path:'/home/:homeId',
+            path:'/home',
+            element:<Home/>,
+            loader:async () => fetch('https://openapi.programming-hero.com/api/quiz')
+        },
+        {
+            path:'home/:homeId',
             loader:async({params})=>{
                 return fetch(` https://openapi.programming-hero.com/api/quiz/${params.homeId}`)
             },
