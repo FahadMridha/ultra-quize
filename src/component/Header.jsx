@@ -13,7 +13,7 @@ const Header = () => {
                     className='inline-flex items-center'
                 >
                     
-                    <span className='ml-2 text-xl font-bold tracking-wide text-orange-400 '>
+                    <span className='ml-2 text-2xl font-bold tracking-wide text-orange-400 '>
                         QuizUltra
                     </span>
                 </Link>
