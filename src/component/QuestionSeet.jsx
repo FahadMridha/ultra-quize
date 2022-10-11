@@ -19,24 +19,24 @@ const QuestionSeet = ({ singleQuestion, _idx }) => {
             wrongAnswer()
         }
     }
-    const notify2 = () => toast(`The correct answer is:${Answer}`, {
+    const notify = () => toast(`The correct answer is:${Answer}`, {
         position: "top-center",
         theme: 'dark'
     });
     return (
-        <div className=''>
-            <div className='bg-gray-300 py-4 flex justify-between mx-10'>
-                <p>Quiz {_idx+1}:{question}</p>
-                <button>
-                    <EyeIcon onClick={notify2} className="h-8 w-8 text-orange-400" />
+        <div className='border border-indigo-600 my-4 mx-10'>
+            <div className=' flex justify-between  bg-gray-300 py-4'>
+                <p className='px-5 text-xl'> <span className='font-bold'>Quiz {_idx + 1}:</span> {question}</p>
+                <button className='px-5'>
+                    <EyeIcon onClick={notify} className="h-8 w-8 text-orange-400" />
                     <ToastContainer />
                 </button>
                 
             </div>
-            <div className=' m-10 p-10 border-solid'>
+            <div className='grid p-10'>
                 {
                     options.map((option,_idx)=>
-                        <label ><input className='grid grid-cols-2' onClick={() => handlerAnswer(option)} type="radio" name="quiz" id={_idx} /> {option}</label>  )
+                        <label ><input onClick={() => handlerAnswer(option)} type="radio" name="quiz" id={_idx} /> {option}</label>  )
                 }
             </div>
         </div>
