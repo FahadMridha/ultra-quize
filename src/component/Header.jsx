@@ -110,8 +110,8 @@ const Header = () => {
                                         <li>
                                             <Link
                                                 to='/home'
-                                                aria-label='Statistics'
-                                                title='Statistics'
+                                                aria-label='Home'
+                                                title='Home'
                                                 className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                                             >
                                                 Home

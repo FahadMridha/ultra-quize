@@ -8,23 +8,17 @@ const QuestionSeet = ({ singleQuestion }) => {
     const { correctAnswer, options,question } = singleQuestion
     // console.log(correctAnswer);
     const Answer = correctAnswer
-    const optionsArray=options
-    const answerHandler=(answer)=>{
-// console.log(answer);
-        if(answer){
-            answer[1]=true
+    const rightAnswer=()=>toast.success("Your ans is Correct")
+    const wrongAnswer=()=>toast.error("Your ans is wrong")
+    const handlerAnswer=(selecetedValue)=>{
+        // console.log(selecetedValue);
+        if (selecetedValue === correctAnswer){
+           rightAnswer()
         }
         else{
-            const notify = () => toast("Wow so false!", {
-                position: "top-center",
-                theme: 'dark'
-            });
+            wrongAnswer()
         }
     }
-    // const notify = () => toast("Wow so easy!", {
-    //     position: "top-center",
-    //     theme: 'dark'
-    // });
     const notify2 = () => toast(`The correct answer is:${Answer}`, {
         position: "top-center",
         theme: 'dark'
@@ -39,11 +33,15 @@ const QuestionSeet = ({ singleQuestion }) => {
                 </button>
                 
             </div>
-            <div className='bg-slate-400 mx-10'>
-                <p><small>
+            <div className='bg-slate-200 m-10 p-10 '>
+                {
+                    options.map((option,_idx)=>
+                        <label><input onClick={() => handlerAnswer(option)} type="radio" name="quiz" id={_idx} /> {option}</label>  )
+                }
+                {/* <p><small>
                     {options.map(q => <div onClick={() => answerHandler(optionsArray)}>{q}</div>)}</small>
                     </p>
-                <ToastContainer/>
+                <ToastContainer/> */}
             </div>
         </div>
     );

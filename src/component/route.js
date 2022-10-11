@@ -13,10 +13,11 @@ export const router=createBrowserRouter([
         children:[
         {
             path:'/',
-            element:<Home/>
+            element:<Home/>,
+             loader: async () => fetch('https://openapi.programming-hero.com/api/quiz')
         },
         {
-            path:'/home',
+            path:'home',
             element:<Home/>,
             loader:async () => fetch('https://openapi.programming-hero.com/api/quiz')
         },
@@ -28,12 +29,12 @@ export const router=createBrowserRouter([
             element:<QuizQsn/>
         },
         {
-            path: '/statistics',
+            path: 'statistics',
             loader: async () => fetch('https://openapi.programming-hero.com/api/quiz'),
             element:<Statistics/>
         },
         {
-            path:'/blog',
+            path:'blog',
             element:<Blog/>
         },
     ]
