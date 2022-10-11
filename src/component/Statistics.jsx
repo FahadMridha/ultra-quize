@@ -11,7 +11,7 @@ const Statistics = () => {
         
         <div className='mt-28'>
             
-            {/* <ResponsiveContainer width="100%" height="100%"> */}
+            <ResponsiveContainer width="95%" height={400}>
                 <LineChart
                     width={500}
                     height={300}
@@ -31,7 +31,7 @@ const Statistics = () => {
                     <Line type="monotone" dataKey="total" stroke="#8884d8" activeDot={{ r: 8 }} />
                     <Line type="monotone" dataKey="name" stroke="#82ca9d" />
                 </LineChart>
-            {/* </ResponsiveContainer> */}
+            </ResponsiveContainer>
             
         </div>
     );

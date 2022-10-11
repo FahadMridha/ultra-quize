@@ -3,7 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {EyeIcon } from '@heroicons/react/24/solid'
 
-const QuestionSeet = ({ singleQuestion }) => {
+const QuestionSeet = ({ singleQuestion, _idx }) => {
     // console.log(singleQuestion);
     const { correctAnswer, options,question } = singleQuestion
     // console.log(correctAnswer);
@@ -24,24 +24,20 @@ const QuestionSeet = ({ singleQuestion }) => {
         theme: 'dark'
     });
     return (
-        <div>
-            <div className='bg-green-400 py-4 flex justify-between mx-10'>
-                <p>{question}</p>
+        <div className=''>
+            <div className='bg-gray-300 py-4 flex justify-between mx-10'>
+                <p>Quiz {_idx+1}:{question}</p>
                 <button>
-                    <EyeIcon onClick={notify2} className="h-4 w-4 text-orange-400" />
+                    <EyeIcon onClick={notify2} className="h-8 w-8 text-orange-400" />
                     <ToastContainer />
                 </button>
                 
             </div>
-            <div className='bg-slate-200 m-10 p-10 '>
+            <div className=' m-10 p-10 border-solid'>
                 {
                     options.map((option,_idx)=>
-                        <label><input onClick={() => handlerAnswer(option)} type="radio" name="quiz" id={_idx} /> {option}</label>  )
+                        <label ><input className='grid grid-cols-2' onClick={() => handlerAnswer(option)} type="radio" name="quiz" id={_idx} /> {option}</label>  )
                 }
-                {/* <p><small>
-                    {options.map(q => <div onClick={() => answerHandler(optionsArray)}>{q}</div>)}</small>
-                    </p>
-                <ToastContainer/> */}
             </div>
         </div>
     );
