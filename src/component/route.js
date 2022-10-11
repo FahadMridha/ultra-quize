@@ -11,10 +11,10 @@ export const router=createBrowserRouter([
     element:<Root/>,
     errorElement:<ErrorPage/>,
         children:[
-        {
-            path:'/',
-            element:<Home/>
-        },
+        // {
+        //     path:'/',
+        //     element:<Home/>
+        // },
         {
             path:'/home',
             loader:async () => fetch('https://openapi.programming-hero.com/api/quiz'),
@@ -29,6 +29,7 @@ export const router=createBrowserRouter([
         },
         {
             path: '/statistics',
+            loader: async () => fetch('https://openapi.programming-hero.com/api/quiz'),
             element:<Statistics/>
         },
         {
