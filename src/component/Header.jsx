@@ -1,52 +1,64 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    let activeStyle = {
+        textDecoration: "underline",
+    };
+
+    let activeClassName = "underline";
     return (
-        <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8 bg-slate-300'>
+        <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8 bg-slate-300 shadow-lg'>
             <div className='relative flex items-center justify-between'>
-                <Link
+                <Link 
                     to='/'
                     aria-label='QuizUltra'
                     title='QuizUltra'
-                    className='inline-flex items-center'
-                >
-                    
+                    className='inline-flex items-center'>
                     <span className='ml-2 text-3xl font-bold tracking-wide text-orange-400 '>
                         QuizUltra
                     </span>
                 </Link>
                 <ul className='flex items-center hidden space-x-8 lg:flex'>
                     <li>
-                        <Link
+                        <NavLink 
                             to='/home'
+                            style={({ isActive }) =>
+                                isActive ? activeStyle : undefined
+                            }
                             aria-label='Home'
                             title='Home'
                             className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
                             Home
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
+                        <NavLink
                             to='/statistics'
+                            style={({ isActive }) =>
+                                isActive ? activeStyle : undefined
+                            }
                             aria-label='Statistics'
                             title='Statistics'
                             className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
                             Statistics
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link
+                        <NavLink
                             to='/blog'
+                            style={({ isActive }) =>
+                                isActive ? activeStyle : undefined
+                            }
                             aria-label='Blog'
                             title='Blog'
                             className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
                             <p> Blog</p>
-                        </Link>
+                        </NavLink>
                     </li>
                     
                 </ul>
@@ -77,7 +89,7 @@ const Header = () => {
                             <div className='p-5 bg-white border rounded shadow-sm'>
                                 <div className='flex items-center justify-between mb-4'>
                                     <div>
-                                        <Link
+                                        <NavLink
                                             to='/'
                                             aria-label='QuizUltra'
                                             title='QuizUltra'
@@ -87,7 +99,7 @@ const Header = () => {
                                             <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
                                                 QuizUltra
                                             </span>
-                                        </Link>
+                                        </NavLink>
                                     </div>
                                     <div>
                                         <button
@@ -108,34 +120,43 @@ const Header = () => {
                                 <nav>
                                     <ul className='space-y-4'>
                                         <li>
-                                            <Link
+                                            <NavLink
                                                 to='/home'
+                                                style={({ isActive }) =>
+                                                    isActive ? activeStyle : undefined
+                                                }
                                                 aria-label='Home'
                                                 title='Home'
                                                 className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                                             >
                                                 Home
-                                            </Link>
+                                            </NavLink>
                                         </li>
                                         <li>
-                                            <Link
+                                            <NavLink
                                                 to='/statistics'
+                                                style={({ isActive }) =>
+                                                    isActive ? activeStyle : undefined
+                                                }
                                                 aria-label='Statistics'
                                                 title='Statistics'
                                                 className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                                             >
                                                 Statistics
-                                            </Link>
+                                            </NavLink>
                                         </li>
                                         <li>
-                                            <Link
+                                            <NavLink
                                                 to='/blog'
+                                                style={({ isActive }) =>
+                                                    isActive ? activeStyle : undefined
+                                                }
                                                 aria-label='Blog'
                                                 title='Blog'
                                                 className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                                             >
                                                 <p> Blog</p>
-                                            </Link>
+                                            </NavLink>
                                         </li>
                                         
                                     </ul>

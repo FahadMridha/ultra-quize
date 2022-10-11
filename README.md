@@ -1,5 +1,5 @@
 # project name
-QuizUltra
+Name: QuizUltra
 # Live Site Link:
 Hosted in Netlify -> [QuizUltra](https://quizultra-com.netlify.app/)
 # React Router Dom v6.4

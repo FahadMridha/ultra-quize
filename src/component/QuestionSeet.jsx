@@ -8,8 +8,8 @@ const QuestionSeet = ({ singleQuestion, _idx }) => {
     const { correctAnswer, options,question } = singleQuestion
     // console.log(correctAnswer);
     const Answer = correctAnswer
-    const rightAnswer=()=>toast.success("Your ans is Correct")
-    const wrongAnswer=()=>toast.error("Your ans is wrong")
+    const rightAnswer=()=>toast.success("Your ans is Correct",{position: toast.POSITION.TOP_RIGHT})
+    const wrongAnswer = () => toast.error("Your ans is wrong", { position: toast.POSITION.TOP_LEFT })
     const handlerAnswer=(selecetedValue)=>{
         // console.log(selecetedValue);
         if (selecetedValue === correctAnswer){
