@@ -10,7 +10,7 @@ const Home = () => {
         <div>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-5  m-10'>
                 <img className='image-full  h-96 w-full rounded-lg' src={quize7} alt="" />
-                <h1 className='text-xl font-bold text-sky-400 text-center my-12'>
+                <h1 className='text-xl font-bold text-sky-500 text-center my-12'>
                     <span className='text-2xl'> Welcome To QuizUltra</span> <br />
                     A quiz refers to a short test of knowledge. <br /> A quiz is much shorter than a traditional test or exam and is rarely impactful on a final course grade.</h1>
             </div>

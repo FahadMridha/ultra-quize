@@ -4,8 +4,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import {EyeIcon } from '@heroicons/react/24/solid'
 
 const QuestionSeet = ({ singleQuestion, _idx }) => {
-    // console.log(singleQuestion);
-    const { correctAnswer, options,question } = singleQuestion
+    console.log(singleQuestion);
+    const { correctAnswer, options,question,id } = singleQuestion
     // console.log(correctAnswer);
     const Answer = correctAnswer
     const rightAnswer=()=>toast.success("Your ans is Correct",{position: toast.POSITION.TOP_RIGHT})
@@ -30,17 +30,18 @@ const QuestionSeet = ({ singleQuestion, _idx }) => {
     return (
         <div className='border border-indigo-600 my-4 mx-10'>
             <div className=' flex justify-between  bg-gray-300 py-4'>
-                <p  className='px-5 text-xl'> <span className='font-bold'>Quiz {_idx + 1}:</span> {question.slice(3,-4)}</p>
+                <p  className='px-5 text-xl' name={question} > <span className='font-bold'>Quiz {_idx + 1}:</span> {question.slice(3,-4)}</p>
                 <button className='px-5 text-orange-400'>
                     <EyeIcon onClick={notify} className="h-8 w-8 " /> Show
                     <ToastContainer />
                 </button>
                 
             </div>
-            <div className='grid p-10'>
+            <div className='grid p-10 '>
                 {
                     options.map((option, _idx) =>
-                        <label key={_idx}><input onClick={() => handlerAnswer(option)} type="radio" name="quiz"  /> {option}</label>)
+                        <label key={_idx}><input onClick={() => handlerAnswer(option)} type="radio" name={id} /> {option}</label>)
+                        
 
                 }
                 </div>
