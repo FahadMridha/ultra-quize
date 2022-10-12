@@ -6,8 +6,6 @@ const Header = () => {
     let activeStyle = {
         textDecoration: "underline",
     };
-
-    let activeClassName = "underline";
     return (
         <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:px-24 lg:px-8 bg-slate-300 shadow-lg'>
             <div className='relative flex items-center justify-between'>

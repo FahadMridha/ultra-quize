@@ -14,7 +14,7 @@ const Categories = ({ categorie }) => {
                     </h2>
                     <p>Total Quize:{total}</p>
                     <div className="card-actions justify-end">
-                        <Link to={`/home/${id}`}>
+                         <Link to={`/home/${id}`}>
                             <button>Start Quiz<ArrowRightIcon className="h-4 w-4 text-blue-500" />
                             </button>
                         </Link>
