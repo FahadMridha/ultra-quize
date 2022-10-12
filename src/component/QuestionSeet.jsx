@@ -30,7 +30,7 @@ const QuestionSeet = ({ singleQuestion, _idx }) => {
     return (
         <div className='border border-indigo-600 my-4 mx-10'>
             <div className=' flex justify-between  bg-gray-300 py-4'>
-                <p id="business" className='px-5 text-xl'> <span className='font-bold'>Quiz {_idx + 1}:</span> {question.slice(3,-4)}</p>
+                <p  className='px-5 text-xl'> <span className='font-bold'>Quiz {_idx + 1}:</span> {question.slice(3,-4)}</p>
                 <button className='px-5 text-orange-400'>
                     <EyeIcon onClick={notify} className="h-8 w-8 " /> Show
                     <ToastContainer />
@@ -40,7 +40,7 @@ const QuestionSeet = ({ singleQuestion, _idx }) => {
             <div className='grid p-10'>
                 {
                     options.map((option, _idx) =>
-                        <label key={_idx}><input onClick={() => handlerAnswer(option)} type="radio" value="quiz"  /> {option}</label>)
+                        <label key={_idx}><input onClick={() => handlerAnswer(option)} type="radio" name="quiz"  /> {option}</label>)
 
                 }
                 </div>
